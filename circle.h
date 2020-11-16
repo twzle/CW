@@ -5,15 +5,19 @@
 
 class Circle : public Figure {
 public:
-  Circle (int r);
+  Circle(int r);
+  Circle();
 
   float Perimeter() override;
   long double Area() override;
   std::string Name() override;
 
   int getRadius() const;
+
+  void setRadius(const int _r);
+  void Resize(const int _r);
 private:
-  int radius;
+  int R;
   float P;
   double S;
 };

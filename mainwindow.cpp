@@ -22,24 +22,26 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::Calculate1(){
-    bool ok;
-    Triangle tr(14,5,12);
+    Triangle tr;
+//    tr.setA(8);
+//    tr.setB(8);
+//    tr.setC(2);
+    tr.Resize(8,8,2);
     ui->label_3->setText(QString("Perimeter: ") + QString::number(tr.Perimeter())+ "\nArea: " + QString::number(tr.Area(),'f',2));
 }
 
 void MainWindow::Calculate2(){
-    bool ok;
-    Rect rect(14,5);
+    Rect rect;
+//    rect.setWidth(12);
+//    rect.setHeight(10);
+    rect.Resize(1,1);
     ui->label_3->setText(QString("Perimeter: ") + QString::number(rect.Perimeter())+ "\nArea: " + QString::number(rect.Area(),'f',2));
 }
 
 void MainWindow::Calculate3(){
-    bool ok;
-    Circle c(14);
+    Circle c;
+    c.Resize(10);
     ui->label_3->setText(QString("Perimeter: ") + QString::number(c.Perimeter())+ "\nArea: " + QString::number(c.Area(),'f',2));
-//    QString text = QInputDialog::getText(this, tr("Circle"),
-//                                             tr("Please, write a telephone num to activate your b.c.:"), QLineEdit::NoEcho,
-//                                             "+7", &ok);
 
 }
 
